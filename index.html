@@ -247,6 +247,127 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://yaobaozai.github.io/zfxcoder/zfxcoder/2017/03/30/3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Evan Yao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/zfxcoder/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="正方形程序员的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/zfxcoder/2017/03/30/3/" itemprop="url">
+                  angularjs高级程序设计读书笔记系列之二
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-30T19:30:19+08:00">
+                2017-03-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>用来占位.</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://yaobaozai.github.io/zfxcoder/zfxcoder/2017/03/30/2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -270,7 +391,7 @@
               
                 
                 <a class="post-title-link" href="/zfxcoder/2017/03/30/2/" itemprop="url">
-                  2
+                  angularjs高级程序设计读书笔记系列之一
                 </a>
               
             
@@ -324,7 +445,9 @@
       
         
           
-            <p>停止对自己的期待与苛责，开始上路。（其实是占位）</p>
+            <p>不跑步怎么减肥<br>暂时应该只能够自己复习用， 敬请谅解。<br>先从第六章开始，在这一章里，作者完成了三个功能。按类名分类，分页，选中高亮。</p>
+<p>前两个功能跟过滤器紧密相连<br>我把完整的代码贴在这里</p>
+<p>angular.module(‘customFilters’,[]).filter(‘unique’,function(){<br>    return function(data,propertyName){<br>        // 类型判断 突出一个严谨<br>        // 空数组用来存放 结果与临时判断条件用的<br>        // 遍历数据<br>        // 命名val<br>        // 如果不存在<br>        // 则让keys的val为true<br>        // 添加进结果数组<br>        // 返回出去<br>        // 类型不满足就直接返回原数据<br>        if(angular.isArray(data) &amp;&amp; angular.isString(propertyName)){<br>            var results = [];<br>            var keys = [];<br>            for(var i = 0; i &lt; data.length; i++){<br>                var val = data[i][propertyName];<br>                if(angular.isUndefined(keys[val])){<br>                    keys[val] = true;<br>                    results.push(val);<br>                }<br>            }<br>            return results;<br>        }else{<br>            return data;<br>        }<br>    }<br>})<br>.filter(‘range’,function($filter){<br>    return function(data,page,size){<br>        //类型判断<br>        if(angular.isArray(data) &amp;&amp; angular.isNumber(page) &amp;&amp; angular.isNumber(size)){<br>            //开始的索引（假设一页三条数据，那么当索引为2的时候应该从3开始）<br>            var start_index = (page - 1) * size;<br>            //如果开始的索引比数据的长度大（即超过了数据的总量，返回空数组）<br>            if(data.length &lt; start_index){<br>                return [];<br>            }else{<br>                //否则的话<br>                //这个概念难以理解，我认为是作者的问题<br>                //前面他考虑读者的基础而介绍基础 这里突然却草草的带过<br>                //原书印刷还有错误，我这里已经更正过来了，导致我在这里卡了很久。<br>                //其实这个一点都不绕<br>                //截取一个分页<br>                return $filter(‘limitTo’)(data.splice(start_index, size));<br>            }<br>        }else{<br>            return data;<br>        }<br>    }<br>})<br>.filter(‘pageCount’,function(){<br>    //这个比上面好理解多了，就是计算<br>    return function(data,size){<br>        if(angular.isArray(data)){<br>            var result = [];<br>            for(var i = 0; i &lt; Math.ceil(data.length / size); i++){<br>                result.push(i);<br>            }<br>            return result;<br>        }else{<br>            return data;<br>        }<br>    }<br>})</p>
 
           
         
@@ -538,7 +661,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/zfxcoder/archives">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
