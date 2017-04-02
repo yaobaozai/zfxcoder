@@ -324,7 +324,7 @@
       
         
           
-            <p>占位</p>
+            <p>这章打算讲解第9章</p>
 
           
         
@@ -445,7 +445,7 @@
       
         
           
-            <p>占位</p>
+            <p>这章打算讲解第五章</p>
 
           
         
@@ -566,7 +566,7 @@
       
         
           
-            <p>占位~</p>
+            <p>这章打算讲解第八章</p>
 
           
         
@@ -687,7 +687,7 @@
       
         
           
-            <p>用来占位.</p>
+            <p>这章打算讲解第七章</p>
 
           
         
@@ -809,8 +809,11 @@
         
           
             <p>不跑步怎么减肥<br>暂时应该只能够自己复习用， 敬请谅解。<br>先从第六章开始，在这一章里，作者完成了三个功能。按类名分类，分页，选中高亮。</p>
-<p>前两个功能跟过滤器紧密相连<br>我把完整的代码贴在这里</p>
-<p>angular.module(‘customFilters’,[]).filter(‘unique’,function(){<br>    return function(data,propertyName){<br>        // 类型判断 突出一个严谨<br>        // 空数组用来存放 结果与临时判断条件用的<br>        // 遍历数据<br>        // 命名val<br>        // 如果不存在<br>        // 则让keys的val为true<br>        // 添加进结果数组<br>        // 返回出去<br>        // 类型不满足就直接返回原数据<br>        if(angular.isArray(data) &amp;&amp; angular.isString(propertyName)){<br>            var results = [];<br>            var keys = [];<br>            for(var i = 0; i &lt; data.length; i++){<br>                var val = data[i][propertyName];<br>                if(angular.isUndefined(keys[val])){<br>                    keys[val] = true;<br>                    results.push(val);<br>                }<br>            }<br>            return results;<br>        }else{<br>            return data;<br>        }<br>    }<br>})<br>.filter(‘range’,function($filter){<br>    return function(data,page,size){<br>        //类型判断<br>        if(angular.isArray(data) &amp;&amp; angular.isNumber(page) &amp;&amp; angular.isNumber(size)){<br>            //开始的索引（假设一页三条数据，那么当索引为2的时候应该从3开始）<br>            var start_index = (page - 1) * size;<br>            //如果开始的索引比数据的长度大（即超过了数据的总量，返回空数组）<br>            if(data.length &lt; start_index){<br>                return [];<br>            }else{<br>                //否则的话<br>                //这个概念难以理解，我认为是作者的问题<br>                //前面他考虑读者的基础而介绍基础 这里突然却草草的带过<br>                //原书印刷还有错误，我这里已经更正过来了，导致我在这里卡了很久。<br>                //其实这个一点都不绕<br>                //截取一个分页<br>                return $filter(‘limitTo’)(data.splice(start_index, size));<br>            }<br>        }else{<br>            return data;<br>        }<br>    }<br>})<br>.filter(‘pageCount’,function(){<br>    //这个比上面好理解多了，就是计算<br>    return function(data,size){<br>        if(angular.isArray(data)){<br>            var result = [];<br>            for(var i = 0; i &lt; Math.ceil(data.length / size); i++){<br>                result.push(i);<br>            }<br>            return result;<br>        }else{<br>            return data;<br>        }<br>    }<br>})</p>
+<p>前两个功能跟过滤器紧密相连<br>我把完整的代码贴在这里<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">'customFilters'</span>,[]).filter(<span class="string">'unique'</span>,<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">	<span class="built_in">return</span> <span class="keyword">function</span>(data,propertyName)&#123;</div><div class="line">		<span class="keyword">if</span>(angular.isArray(data) &amp;&amp; angular.isString(propertyName))&#123;</div><div class="line">			var results = [];</div><div class="line">			var keys = [];</div><div class="line">			<span class="keyword">for</span>(var i = 0; i &lt; data.length; i++)&#123;</div><div class="line">				var val = data[i][propertyName];</div><div class="line">				<span class="keyword">if</span>(angular.isUndefined(keys[val]))&#123;</div><div class="line">					keys[val] = <span class="literal">true</span>;</div><div class="line">					results.push(val);</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			<span class="built_in">return</span> results;</div><div class="line">		&#125;<span class="keyword">else</span>&#123;</div><div class="line">			<span class="built_in">return</span> data;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;)</div><div class="line">.filter(<span class="string">'range'</span>,<span class="keyword">function</span>(<span class="variable">$filter</span>)&#123;</div><div class="line">	<span class="built_in">return</span> <span class="keyword">function</span>(data,page,size)&#123;</div><div class="line">		<span class="keyword">if</span>(angular.isArray(data) &amp;&amp; angular.isNumber(page) &amp;&amp; angular.isNumber(size))&#123;</div><div class="line">			var start_index = (page - 1) * size;</div><div class="line">			<span class="keyword">if</span>(data.length &lt; start_index)&#123;</div><div class="line">				<span class="built_in">return</span> [];</div><div class="line">			&#125;<span class="keyword">else</span>&#123;</div><div class="line">				<span class="built_in">return</span> <span class="variable">$filter</span>(<span class="string">'limitTo'</span>)(data.splice(start_index, size));</div><div class="line">			&#125;</div><div class="line">		&#125;<span class="keyword">else</span>&#123;</div><div class="line">			<span class="built_in">return</span> data;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;)</div><div class="line">.filter(<span class="string">'pageCount'</span>,<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">	<span class="built_in">return</span> <span class="keyword">function</span>(data,size)&#123;</div><div class="line">		<span class="keyword">if</span>(angular.isArray(data) &amp;&amp; angular.isNumber(size))&#123;</div><div class="line">			var result = [];</div><div class="line">			<span class="keyword">for</span>(var i = 0; i &lt; Math.ceil(data.length / size); i++)&#123;</div><div class="line">				result.push(i);</div><div class="line">			&#125;</div><div class="line">			<span class="built_in">return</span> result;</div><div class="line">		&#125;<span class="keyword">else</span>&#123;</div><div class="line">			<span class="built_in">return</span> data;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>你可以看到一些事情，作者在定义过滤器的时候都做了一个前置工作-&gt;数据类型判断。<br>第一个过滤器是为了生成目录而定义的，它的作用是生成独一无二的category。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">angular.isUndefined()</div></pre></td></tr></table></figure>
+<p>作者在第五章里介绍过，我会在后续的笔记更新这节里讲到的angular相关的知识点。</p>
+<p>第二个过滤器和第三个过滤器两个结合起来完成分页的功能，第二个过滤器的作用是截取数据数组，它的参数有page和size，page是可以转换成索引的，size则是一页显示</p>
 
           
         
