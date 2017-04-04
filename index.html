@@ -247,6 +247,130 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://yaobaozai.github.io/zfxcoder/zfxcoder/2017/04/04/三种方法实现继承/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Evan Yao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/zfxcoder/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="正方形程序员的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/zfxcoder/2017/04/04/三种方法实现继承/" itemprop="url">
+                  三种方法实现继承
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-04T22:30:19+08:00">
+                2017-04-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>1.构造方法原型链继承<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">Animal</span></span> ()&#123;</div><div class="line">	this.eat = <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">		console.log(<span class="string">'eat...'</span>)</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">function</span> Cat(age)&#123;</div><div class="line">	this.age = age;</div><div class="line">&#125;</div><div class="line">Cat.prototype = new Animal();</div><div class="line">var cat = new Cat(10);</div><div class="line">console.log(<span class="string">'cat.age='</span> + cat.age);</div><div class="line">cat.eat();</div></pre></td></tr></table></figure></p>
+<p>2.使用apply、call方法实现继承<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> Person (name,age) &#123;</div><div class="line">	this.name = name;</div><div class="line">	this.age = age;</div><div class="line">&#125;</div><div class="line"><span class="keyword">function</span> student (name,age,love) &#123;</div><div class="line">	//Person.apply (this,[name,age]);</div><div class="line">	Person.call (this,name,age);</div><div class="line">	this.love = love;</div><div class="line">&#125;</div><div class="line">var student = new Student(<span class="string">'jane'</span>,23,<span class="string">'pingpong'</span>);</div><div class="line">console.log(student.name,student.age,student.love);</div></pre></td></tr></table></figure></p>
+<p>3.使用对象实例间继承<br>在Javascript语言中，对象可以继承另外一个对象的属性。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> Person (name,age) &#123;</div><div class="line">	this.name = name;</div><div class="line">	this.age = age;</div><div class="line">&#125;</div><div class="line">var person = new Person (<span class="string">'jane'</span>,28);</div><div class="line">var student = Object.create (person);</div><div class="line">student.love = <span class="string">'pingpong'</span>;</div><div class="line">console.log(Object.getPrototypeOf (student) );</div><div class="line">console.log(student.name,student.age,student.love);</div></pre></td></tr></table></figure></p>
+<p>如上面的代码所示，在本例中我们使用了Object.create()方法，它的作用是以一个对象为原型创建另外一个对象，创建的对象和原对象具有相同的属性，我们可以通过Object.getPrototypeOf()方法会过去新对象的原型。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://yaobaozai.github.io/zfxcoder/zfxcoder/2017/04/03/pro angular6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -808,8 +932,7 @@
       
         
           
-            <p>这章打算讲解第七章</p>
-
+            <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">'cart'</span>,[]).factory(<span class="string">'cart'</span>,<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">	var cartData = [];</div><div class="line"></div><div class="line">	<span class="built_in">return</span> &#123;</div><div class="line">		//添加指定的产品到购物车，或者如果购物车已经包含了该产品，就增加所需的数量</div><div class="line">		addProduct: <span class="keyword">function</span>(id,name,price)&#123;</div><div class="line">			//这条语句只是为了确保我的<span class="keyword">for</span>没有执行</div><div class="line">			var addedToExistingItem = <span class="literal">false</span>;</div><div class="line">			<span class="keyword">for</span>(var i = 0; i &lt; cartData.length; i++)&#123;</div><div class="line">				<span class="keyword">if</span>(cartData[i].id == id)&#123;</div><div class="line">					cartData[i].count++;</div><div class="line">					addedToExistingItem = <span class="literal">true</span>;</div><div class="line">					<span class="built_in">break</span>;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">if</span>(!addedToExistingItem)&#123;</div><div class="line">				cartData.push(&#123;</div><div class="line">					count:1,id:id,price:price,name:name</div><div class="line">				&#125;);</div><div class="line">			&#125;</div><div class="line">		&#125;,</div><div class="line">		//删除指定ID的产品</div><div class="line">		removeProduct: <span class="keyword">function</span>(id)&#123;</div><div class="line">			<span class="keyword">for</span>(var i = 0; i &lt; cartData.length; i++)&#123;</div><div class="line">				<span class="keyword">if</span>(cartData[i].id == id) &#123;</div><div class="line">					cartData.splice(i,1);</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;,</div><div class="line">		//返回购物车中对象的数组</div><div class="line">		getProducts: <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">			<span class="built_in">return</span> cartData;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;)</div><div class="line">.directive(<span class="string">"cartSummary"</span>,<span class="keyword">function</span>(cart)&#123;</div><div class="line">	<span class="built_in">return</span> &#123;</div><div class="line">		restrict:<span class="string">'E'</span>,</div><div class="line">		templateUrl:<span class="string">'components/cart/cartSummary.html'</span>,</div><div class="line">		//指定向局部视图提供数据和行为的控制器</div><div class="line">		controller: <span class="keyword">function</span>(<span class="variable">$scope</span>)&#123;</div><div class="line"></div><div class="line">			var cartData = cart.getProducts();</div><div class="line"></div><div class="line">			<span class="variable">$scope</span>.total = <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">				var total = 0;</div><div class="line">				<span class="keyword">for</span>(var i = 0; i &lt; cartData.length; i++)&#123;</div><div class="line">					total += (cartData[i].price * cartData[i].count);</div><div class="line">				&#125;</div><div class="line">				<span class="built_in">return</span> total;</div><div class="line">			&#125;</div><div class="line"></div><div class="line">			<span class="variable">$scope</span>.itemCount = <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">				var total = 0;</div><div class="line">				<span class="keyword">for</span>(var i = 0; i &lt; cartData.length; i++)&#123;</div><div class="line">					total += cartData[i].count;</div><div class="line">				&#125;</div><div class="line">				<span class="built_in">return</span> total;</div><div class="line">			&#125;</div><div class="line"></div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
           
         
       
@@ -978,7 +1101,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://yaobaozai.github.io/zfxcoder/zfxcoder/2017/03/28/1/">
+    <link itemprop="mainEntityOfPage" href="https://yaobaozai.github.io/zfxcoder/zfxcoder/2017/03/28/basic hexo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Evan Yao">
@@ -1000,7 +1123,7 @@
             
               
                 
-                <a class="post-title-link" href="/zfxcoder/2017/03/28/1/" itemprop="url">
+                <a class="post-title-link" href="/zfxcoder/2017/03/28/basic hexo/" itemprop="url">
                   windows使用hexo搭建个人博客并部署到github
                 </a>
               
@@ -1148,7 +1271,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/zfxcoder/archives">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
