@@ -1008,7 +1008,7 @@
               
                 
                 <a class="post-title-link" href="/zfxcoder/2017/04/02/pro angular5/" itemprop="url">
-                  angularjs高级程序设计读书笔记系列之五
+                  angularjs高级程序设计读书笔记系列之五(CH9)
                 </a>
               
             
@@ -1062,7 +1062,19 @@
       
         
           
-            <p>这章打算讲解第9章</p>
+            <h1 id="ch9"><a href="#ch9" class="headerlink" title="ch9"></a>ch9</h1><!-- 1. 创建一个AngularJS模块           `angular.module` 1、2
+1. 设置一个模块的作用域            `ng-app`属性 3
+1. 定义一个控制器                  `Module.controller`方法 4、8
+1. 将一个控制器应用于一个视图      `ng-controller`属性 5、7
+1. 从一个控制器向一个视图传递数据  `$scope`服务 6
+1. 定义一个指令                    `Module.directive`方法  9  
+1. 定义一个过滤器                  `Module.filter`方法  10
+1. 以编程方式使用一个过滤器        `$filter`服务 11
+1. 定义一个服务                    `Module.service、Module.factory、Module.provider`   12
+1. 从一个已有的对象或值定义一个服务`Module.value`方法   13
+向应用程序中的代码添加结构   创建多个模块并从`ng-app` 属性引用的模块中声明依赖  14-16 
+1. 注册在模块被加载时调用的函数    使用`Module.config` 和 `Module.run`方法 17 -->
+<table><br>    <tr><br>        <td>本章问题</td><br>        <td>解决方案</td><br>        <td>代码清单</td><br>    </tr><br>    <tr><br>        <td>创建一个AngularJS模块</td><br>        <td><code>angular.module</code></td><br>        <td>1、2</td><br>    </tr><br>    <tr><br>        <td>定义一个控制器</td><br>        <td><code>ng-app</code>属性</td><br>        <td>3</td><br>    </tr><br>     <tr><br>        <td>创建一个AngularJS模块</td><br>        <td><code>Module.controller</code>方法</td><br>        <td>4、8</td><br>    </tr><br>    <tr><br>        <td>将一个控制器应用于一个视图</td><br>        <td><code>ng-controller</code>属性</td><br>        <td>5、7</td><br>    </tr><br>     <tr><br>        <td>从一个控制器向一个视图传递数据</td><br>        <td><code>$scope</code>服务</td><br>        <td>6</td><br>    </tr><br>    <tr><br>        <td>定义一个指令</td><br>        <td><code>Module.directive</code>方法</td><br>        <td>9</td><br>    </tr><br>     <tr><br>        <td>定义一个过滤器</td><br>        <td><code>Module.filter</code>方法</td><br>        <td>10</td><br>    </tr><br>    <tr><br>        <td>以编程方式使用一个过滤器</td><br>        <td><code>$filter</code>服务</td><br>        <td>11</td><br>    </tr><br>     <tr><br>        <td>定义一个服务</td><br>        <td><code>Module.service、Module.factory、Module.provider</code></td><br>        <td>12</td><br>    </tr><br>     <tr><br>        <td>从一个已有的对象或值定义一个服务</td><br>        <td><code>Module.value</code>方法</td><br>        <td>13</td><br>    </tr><br>     <tr><br>        <td>向应用程序中的代码添加结构</td><br>        <td>创建多个模块并从<code>ng-app</code>属性引用的模块中声明依赖</td><br>        <td>14-16</td><br>    </tr><br>    <tr><br>        <td>注册在模块被加载时调用的函数</td><br>        <td>使用<code>Module.config</code> 和 <code>Module.run</code>方法</td><br>        <td>17</td><br>    </tr><br></table>
 
           
         
@@ -1129,7 +1141,7 @@
               
                 
                 <a class="post-title-link" href="/zfxcoder/2017/04/01/pro angular4/" itemprop="url">
-                  angularjs高级程序设计读书笔记系列之四
+                  angularjs高级程序设计读书笔记系列之四(CH5)
                 </a>
               
             
@@ -1183,8 +1195,7 @@
       
         
           
-            <p>这章打算讲解第五章</p>
-
+            <h1 id="ch5"><a href="#ch5" class="headerlink" title="ch5"></a>ch5</h1><table><br>    <tr><br>        <td>本章问题</td><br>        <td>解决方案</td><br>        <td>代码清单1</td><br>    </tr><br>    <tr><br>        <td>向HTML文档添加Javascript</td><br>        <td>使用script元素</td><br>        <td>1</td><br>    </tr><br>    <tr><br>        <td>创建Javascript功能</td><br>        <td>使用Javascript语句</td><br>        <td>3</td><br>    </tr><br>    <tr><br>        <td>创建由命令执行的语句组</td><br>        <td>使用函数</td><br>        <td>4-6</td><br>    </tr><br>    <tr><br>        <td>检查函数</td><br>        <td>使用angular.isFunction方法</td><br>        <td>7</td><br>    </tr><br>    <tr><br>        <td>存储值和对象备用</td><br>        <td>使用变量</td><br>        <td>8</td><br>    </tr><br>    <tr><br>        <td>存储不同类型的数据</td><br>        <td>使用类型</td><br>        <td>9、10、12</td><br>    </tr><br>    <tr><br>        <td>检查和维护字符串</td><br>        <td>使用angular.isString、angular.uppercase 和 angular.lowercase方法</td><br>        <td>11</td><br>    </tr><br>    <tr><br>        <td>定义自定义数据类型</td><br>        <td>创建对象</td><br>        <td>13-23</td><br>    </tr><br>    <tr><br>        <td>控制Javascript代码流</td><br>        <td>使用条件语句</td><br>        <td>24</td><br>    </tr><br>    <tr><br>        <td>确定两个对象或值是否相同</td><br>        <td>使用质量和恒等运算符</td><br>        <td>25-28</td><br>    </tr><br>    <tr><br>        <td>显式转换类型</td><br>        <td>使用totype方法</td><br>        <td>29-31</td><br>    </tr><br>    <tr><br>        <td>逐一存储相关连的对象或值</td><br>        <td>使用数组</td><br>        <td>32-37</td><br>    </tr><br>    <tr><br>        <td>确定变量是否已被定义并赋值</td><br>        <td>检查null和undefined值</td><br>        <td>38-41</td><br>    </tr><br>    <tr><br>        <td>在异步任务完成时收到通知</td><br>        <td>使用promise对象</td><br>        <td>42、43</td><br>    </tr><br>    <tr><br>        <td>编码和解码JSON数据</td><br>        <td>使用angular.toJson和angular.fromJson方法</td><br>        <td>44</td><br>    </tr><br></table>
           
         
       
