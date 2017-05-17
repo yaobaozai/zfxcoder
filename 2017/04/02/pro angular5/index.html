@@ -88,18 +88,123 @@
 
 
 <meta name="description" content="ch9
-            本章问题        解决方案        代码清单                创建一个AngularJS模块        angular.module        1、2                定义一个控制器        ng-app属性        3                 创建一个AngularJS模块        Modu">
+
+
+本章问题
+解决方案
+代码清单
+
+
+
+
+创建一个AngularJS模块
+angular.module
+1、2
+
+
+设置一个模块的作用域
+ng-app属性
+3
+
+
+定义一个控制器
+Module.controller方法
+4、8
+
+
+将一个控制器应用于一个视图
+ng-controller属性
+5、7
+
+
+从一个控制器向一个视图传递数据
+$scope服务
+6
+
+
+定义一个指令
+Module.d">
 <meta property="og:type" content="article">
 <meta property="og:title" content="angularjs高级程序设计读书笔记系列之五(CH9)">
 <meta property="og:url" content="https://yaobaozai.github.io/zfxcoder/2017/04/02/pro angular5/index.html">
 <meta property="og:site_name" content="正方形程序员的博客">
 <meta property="og:description" content="ch9
-            本章问题        解决方案        代码清单                创建一个AngularJS模块        angular.module        1、2                定义一个控制器        ng-app属性        3                 创建一个AngularJS模块        Modu">
-<meta property="og:updated_time" content="2017-05-16T09:19:51.532Z">
+
+
+本章问题
+解决方案
+代码清单
+
+
+
+
+创建一个AngularJS模块
+angular.module
+1、2
+
+
+设置一个模块的作用域
+ng-app属性
+3
+
+
+定义一个控制器
+Module.controller方法
+4、8
+
+
+将一个控制器应用于一个视图
+ng-controller属性
+5、7
+
+
+从一个控制器向一个视图传递数据
+$scope服务
+6
+
+
+定义一个指令
+Module.d">
+<meta property="og:updated_time" content="2017-05-17T03:00:37.396Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="angularjs高级程序设计读书笔记系列之五(CH9)">
 <meta name="twitter:description" content="ch9
-            本章问题        解决方案        代码清单                创建一个AngularJS模块        angular.module        1、2                定义一个控制器        ng-app属性        3                 创建一个AngularJS模块        Modu">
+
+
+本章问题
+解决方案
+代码清单
+
+
+
+
+创建一个AngularJS模块
+angular.module
+1、2
+
+
+设置一个模块的作用域
+ng-app属性
+3
+
+
+定义一个控制器
+Module.controller方法
+4、8
+
+
+将一个控制器应用于一个视图
+ng-controller属性
+5、7
+
+
+从一个控制器向一个视图传递数据
+$scope服务
+6
+
+
+定义一个指令
+Module.d">
 
 
 
@@ -324,19 +429,77 @@
       
 
       
-        <h1 id="ch9"><a href="#ch9" class="headerlink" title="ch9"></a>ch9</h1><!-- 1. 创建一个AngularJS模块           `angular.module` 1、2
-1. 设置一个模块的作用域            `ng-app`属性 3
-1. 定义一个控制器                  `Module.controller`方法 4、8
-1. 将一个控制器应用于一个视图      `ng-controller`属性 5、7
-1. 从一个控制器向一个视图传递数据  `$scope`服务 6
-1. 定义一个指令                    `Module.directive`方法  9  
-1. 定义一个过滤器                  `Module.filter`方法  10
-1. 以编程方式使用一个过滤器        `$filter`服务 11
-1. 定义一个服务                    `Module.service、Module.factory、Module.provider`   12
-1. 从一个已有的对象或值定义一个服务`Module.value`方法   13
-向应用程序中的代码添加结构   创建多个模块并从`ng-app` 属性引用的模块中声明依赖  14-16 
-1. 注册在模块被加载时调用的函数    使用`Module.config` 和 `Module.run`方法 17 -->
-<table><br>    <tr><br>        <td>本章问题</td><br>        <td>解决方案</td><br>        <td>代码清单</td><br>    </tr><br>    <tr><br>        <td>创建一个AngularJS模块</td><br>        <td><code>angular.module</code></td><br>        <td>1、2</td><br>    </tr><br>    <tr><br>        <td>定义一个控制器</td><br>        <td><code>ng-app</code>属性</td><br>        <td>3</td><br>    </tr><br>     <tr><br>        <td>创建一个AngularJS模块</td><br>        <td><code>Module.controller</code>方法</td><br>        <td>4、8</td><br>    </tr><br>    <tr><br>        <td>将一个控制器应用于一个视图</td><br>        <td><code>ng-controller</code>属性</td><br>        <td>5、7</td><br>    </tr><br>     <tr><br>        <td>从一个控制器向一个视图传递数据</td><br>        <td><code>$scope</code>服务</td><br>        <td>6</td><br>    </tr><br>    <tr><br>        <td>定义一个指令</td><br>        <td><code>Module.directive</code>方法</td><br>        <td>9</td><br>    </tr><br>     <tr><br>        <td>定义一个过滤器</td><br>        <td><code>Module.filter</code>方法</td><br>        <td>10</td><br>    </tr><br>    <tr><br>        <td>以编程方式使用一个过滤器</td><br>        <td><code>$filter</code>服务</td><br>        <td>11</td><br>    </tr><br>     <tr><br>        <td>定义一个服务</td><br>        <td><code>Module.service、Module.factory、Module.provider</code></td><br>        <td>12</td><br>    </tr><br>     <tr><br>        <td>从一个已有的对象或值定义一个服务</td><br>        <td><code>Module.value</code>方法</td><br>        <td>13</td><br>    </tr><br>     <tr><br>        <td>向应用程序中的代码添加结构</td><br>        <td>创建多个模块并从<code>ng-app</code>属性引用的模块中声明依赖</td><br>        <td>14-16</td><br>    </tr><br>    <tr><br>        <td>注册在模块被加载时调用的函数</td><br>        <td>使用<code>Module.config</code> 和 <code>Module.run</code>方法</td><br>        <td>17</td><br>    </tr><br></table>
+        <h1 id="ch9"><a href="#ch9" class="headerlink" title="ch9"></a>ch9</h1><table>
+<thead>
+<tr>
+<th style="text-align:left">本章问题</th>
+<th style="text-align:left">解决方案</th>
+<th style="text-align:center">代码清单</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">创建一个AngularJS模块</td>
+<td style="text-align:left"><code>angular.module</code></td>
+<td style="text-align:center">1、2</td>
+</tr>
+<tr>
+<td style="text-align:left">设置一个模块的作用域</td>
+<td style="text-align:left"><code>ng-app</code>属性</td>
+<td style="text-align:center">3</td>
+</tr>
+<tr>
+<td style="text-align:left">定义一个控制器</td>
+<td style="text-align:left"><code>Module.controller</code>方法</td>
+<td style="text-align:center">4、8</td>
+</tr>
+<tr>
+<td style="text-align:left">将一个控制器应用于一个视图</td>
+<td style="text-align:left"><code>ng-controller</code>属性</td>
+<td style="text-align:center">5、7</td>
+</tr>
+<tr>
+<td style="text-align:left">从一个控制器向一个视图传递数据</td>
+<td style="text-align:left"><code>$scope</code>服务</td>
+<td style="text-align:center">6</td>
+</tr>
+<tr>
+<td style="text-align:left">定义一个指令</td>
+<td style="text-align:left"><code>Module.directive</code>方法</td>
+<td style="text-align:center">9  </td>
+</tr>
+<tr>
+<td style="text-align:left">定义一个过滤器</td>
+<td style="text-align:left"><code>Module.filter</code>方法</td>
+<td style="text-align:center">10</td>
+</tr>
+<tr>
+<td style="text-align:left">以编程方式使用一个过滤器</td>
+<td style="text-align:left"><code>$filter</code>服务</td>
+<td style="text-align:center">11</td>
+</tr>
+<tr>
+<td style="text-align:left">定义一个服务</td>
+<td style="text-align:left"><code>Module.service、Module.factory、Module.provider</code></td>
+<td style="text-align:center">12</td>
+</tr>
+<tr>
+<td style="text-align:left">从一个已有的对象或值定义一个服务</td>
+<td style="text-align:left"><code>Module.value</code>方法</td>
+<td style="text-align:center">13</td>
+</tr>
+<tr>
+<td style="text-align:left">向应用程序中的代码添加结构</td>
+<td style="text-align:left">创建多个模块并从<code>ng-app</code> 属性引用的模块中声明依赖</td>
+<td style="text-align:center">14-16 </td>
+</tr>
+<tr>
+<td style="text-align:left">注册在模块被加载时调用的函数</td>
+<td style="text-align:left">使用<code>Module.config</code> 和 <code>Module.run</code>方法</td>
+<td style="text-align:center">17 </td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
