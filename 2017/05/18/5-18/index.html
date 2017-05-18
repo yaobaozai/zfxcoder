@@ -87,22 +87,121 @@
 
 
 
-<meta name="description" content="15章的问题1.创建一个自定义指令     1-32.准备被指令所包含的元素 4-53.配置指令               6-84.在作用域中响应变化     9-115.在链接函数中操作元素   12-196.使用jQuery代替jqLite   20
-从第九章开始，每次开头这本书都会提出一系列的问题来作为本章节的引导，随后作者会在内容里去解决这些问题。什么是注入器
-1.从作用域获取数据">
+<meta name="description" content="html标签
+
+
+标签名
+意义
+
+
+
+
+p
+段落
+
+
+h系列
+标题1~6 从大到小
+
+
+table系列
+绘制表格
+
+
+div
+块
+
+
+input系列
+表单
+
+
+button
+按钮
+
+
+
+概念行内元素与块级元素行内元素直接设置宽高是不会生效的行内元素如何与块级元素转换
+内外边距  盒模型影响一个元素的大小  有 padding 内边距 margin 外边距 border 边框 宽高position属">
 <meta property="og:type" content="article">
-<meta property="og:title" content="angularjs高级程序设计读书笔记系列之七">
-<meta property="og:url" content="https://yaobaozai.github.io/zfxcoder/2017/04/05/pro angular7(15)/index.html">
+<meta property="og:title" content="布局入门之理解html标签和css属性">
+<meta property="og:url" content="https://yaobaozai.github.io/zfxcoder/2017/05/18/5-18/index.html">
 <meta property="og:site_name" content="正方形程序员的博客">
-<meta property="og:description" content="15章的问题1.创建一个自定义指令     1-32.准备被指令所包含的元素 4-53.配置指令               6-84.在作用域中响应变化     9-115.在链接函数中操作元素   12-196.使用jQuery代替jqLite   20
-从第九章开始，每次开头这本书都会提出一系列的问题来作为本章节的引导，随后作者会在内容里去解决这些问题。什么是注入器
-1.从作用域获取数据">
-<meta property="og:updated_time" content="2017-04-06T12:56:08.617Z">
+<meta property="og:description" content="html标签
+
+
+标签名
+意义
+
+
+
+
+p
+段落
+
+
+h系列
+标题1~6 从大到小
+
+
+table系列
+绘制表格
+
+
+div
+块
+
+
+input系列
+表单
+
+
+button
+按钮
+
+
+
+概念行内元素与块级元素行内元素直接设置宽高是不会生效的行内元素如何与块级元素转换
+内外边距  盒模型影响一个元素的大小  有 padding 内边距 margin 外边距 border 边框 宽高position属">
+<meta property="og:updated_time" content="2017-05-18T14:48:40.621Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="angularjs高级程序设计读书笔记系列之七">
-<meta name="twitter:description" content="15章的问题1.创建一个自定义指令     1-32.准备被指令所包含的元素 4-53.配置指令               6-84.在作用域中响应变化     9-115.在链接函数中操作元素   12-196.使用jQuery代替jqLite   20
-从第九章开始，每次开头这本书都会提出一系列的问题来作为本章节的引导，随后作者会在内容里去解决这些问题。什么是注入器
-1.从作用域获取数据">
+<meta name="twitter:title" content="布局入门之理解html标签和css属性">
+<meta name="twitter:description" content="html标签
+
+
+标签名
+意义
+
+
+
+
+p
+段落
+
+
+h系列
+标题1~6 从大到小
+
+
+table系列
+绘制表格
+
+
+div
+块
+
+
+input系列
+表单
+
+
+button
+按钮
+
+
+
+概念行内元素与块级元素行内元素直接设置宽高是不会生效的行内元素如何与块级元素转换
+内外边距  盒模型影响一个元素的大小  有 padding 内边距 margin 外边距 border 边框 宽高position属">
 
 
 
@@ -130,13 +229,13 @@
 
 
 
-  <link rel="canonical" href="https://yaobaozai.github.io/zfxcoder/2017/04/05/pro angular7(15)/"/>
+  <link rel="canonical" href="https://yaobaozai.github.io/zfxcoder/2017/05/18/5-18/"/>
 
 
 
 
 
-  <title> angularjs高级程序设计读书笔记系列之七 | 正方形程序员的博客 </title>
+  <title> 布局入门之理解html标签和css属性 | 正方形程序员的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -255,7 +354,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://yaobaozai.github.io/zfxcoder/zfxcoder/2017/04/05/pro angular7(15)/">
+    <link itemprop="mainEntityOfPage" href="https://yaobaozai.github.io/zfxcoder/zfxcoder/2017/05/18/5-18/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Evan Yao">
@@ -276,7 +375,7 @@
             
             
               
-                angularjs高级程序设计读书笔记系列之七
+                布局入门之理解html标签和css属性
               
             
           </h1>
@@ -291,8 +390,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-05T19:10:19+08:00">
-                2017-04-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-18T21:45:55+08:00">
+                2017-05-18
               </time>
             
 
@@ -327,15 +426,46 @@
       
 
       
-        <p>15章的问题<br>1.创建一个自定义指令     1-3<br>2.准备被指令所包含的元素 4-5<br>3.配置指令               6-8<br>4.在作用域中响应变化     9-11<br>5.在链接函数中操作元素   12-19<br>6.使用jQuery代替jqLite   20</p>
-<p>从第九章开始，每次开头这本书都会提出一系列的问题来作为本章节的引导，随后作者会在内容里去解决这些问题。<br>什么是注入器</p>
-<p>1.从作用域获取数据<br>    在指令里并不声明对$scope服务的依赖，作为取代，传入指令被应用到的视图的控制器所创建的作用域</p>
-<p>2.生成HTML元素<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">'app'</span>,[])</div><div class="line">        .directive(<span class="string">'unorderedList'</span>,<span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">            <span class="built_in">return</span> <span class="keyword">function</span> (scope, element, attrs) &#123;</div><div class="line">                var data = scope[attrs[<span class="string">'unorderedList'</span>]];</div><div class="line">                <span class="keyword">if</span>(angular.isArray(data))&#123;</div><div class="line">                    var listElem = angular.element(<span class="string">'&lt;ul&gt;'</span>);</div><div class="line">                    element.append(listElem);</div><div class="line">                    angular.forEach(data,<span class="keyword">function</span>(value,index)&#123;</div><div class="line">                        listElem.append(angular.element(<span class="string">'&lt;li&gt;'</span>).text(data[index].name))</div><div class="line">                    &#125;)</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;)</div></pre></td></tr></table></figure></p>
-<h2 id="代码解释"><a href="#代码解释" class="headerlink" title="代码解释"></a>代码解释</h2><p>1.使用unorderedList作为key来获取对应的值，然后传给scope对象来获取数据<br>2.获取了数据之后，判断数据类型<br>3.jqLite是通过element参数来调用的，方法解释：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">angular.element -&gt; 创建一个元素</div><div class="line">element.append 插入到element的尾部</div></pre></td></tr></table></figure></p>
-<p>4.使用了forEach来取代for循环，forEach方法接收两个参数，数组和回调函数。<br>5.链式调用也可以说成是fluent API的支持</p>
-<p>可是光这点程度肯定不行，接下来我们摆脱对数据名称的依赖，表达式的支持<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">angular.forEach(data,<span class="keyword">function</span>(value,index)&#123;</div><div class="line">        var itemElem = angular.element(<span class="string">'&lt;li&gt;'</span>);</div><div class="line">        listElem.append(itemElem);</div><div class="line">        var watcherFn = <span class="keyword">function</span> (watchScope)&#123;</div><div class="line">            <span class="built_in">return</span> watchScope.<span class="variable">$eval</span>(propertyExpression,data[index]);</div><div class="line">        &#125;</div><div class="line">        //定义一个监听器函数</div><div class="line">        scope.<span class="variable">$watch</span>(watcherFn,<span class="keyword">function</span>(newValue,oldValue)&#123;</div><div class="line">            itemElem.text(newValue);</div><div class="line">        &#125;)</div><div class="line">        //指令能够监控被li元素显示的属性值，并在其值被改变时更新元素的内容</div><div class="line"> &#125;)</div><div class="line"> ``` </div><div class="line">                 </div><div class="line"> ```  bash            </div><div class="line">        <span class="keyword">for</span>(var i = 0; i &lt; data.length; i++)&#123;</div><div class="line">            (<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">                var itemElem = angular.element(<span class="string">'&lt;li&gt;'</span>);</div><div class="line">                listElem.append(itemElem);</div><div class="line"></div><div class="line">                var index = i;</div><div class="line"></div><div class="line">                var watcherFn = <span class="keyword">function</span> (watchScope) &#123;</div><div class="line">                    <span class="built_in">return</span> watchScope.<span class="variable">$eval</span>(propertyExpression,data[index]);</div><div class="line">                &#125;</div><div class="line">                scope.<span class="variable">$watch</span>(watcherFn,<span class="keyword">function</span> (newValue,oldValue) &#123;</div><div class="line">                    itemElem.text(newValue);</div><div class="line">                &#125;)</div><div class="line">            &#125;())</div><div class="line">        &#125;</div></pre></td></tr></table></figure></p>
-<p>在学习过程中，我意外的发现了使用forEach工具函数可以规避上面的问题</p>
-
+        <h2 id="html标签"><a href="#html标签" class="headerlink" title="html标签"></a>html标签</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">标签名</th>
+<th style="text-align:left">意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">p</td>
+<td style="text-align:left">段落</td>
+</tr>
+<tr>
+<td style="text-align:left">h系列</td>
+<td style="text-align:left">标题1~6 从大到小</td>
+</tr>
+<tr>
+<td style="text-align:left">table系列</td>
+<td style="text-align:left">绘制表格</td>
+</tr>
+<tr>
+<td style="text-align:left">div</td>
+<td style="text-align:left">块</td>
+</tr>
+<tr>
+<td style="text-align:left">input系列</td>
+<td style="text-align:left">表单</td>
+</tr>
+<tr>
+<td style="text-align:left">button</td>
+<td style="text-align:left">按钮</td>
+</tr>
+</tbody>
+</table>
+<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>行内元素与块级元素<br>行内元素直接设置宽高是不会生效的<br>行内元素如何与块级元素转换</p>
+<p>内外边距  盒模型<br>影响一个元素的大小  有 padding 内边距 margin 外边距 border 边框 宽高<br>position属性 : 1. relative 相对</p>
+<pre><code>2. absolute 绝对
+3. fixed    固定
+</code></pre><p>子绝 父相</p>
+<h2 id="css属性"><a href="#css属性" class="headerlink" title="css属性"></a>css属性</h2>
       
     </div>
 
@@ -371,8 +501,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/zfxcoder/2017/04/04/three ways inherit/" rel="next" title="三种方法实现继承">
-                <i class="fa fa-chevron-left"></i> 三种方法实现继承
+              <a href="/zfxcoder/2017/05/16/pro jquery/" rel="next" title="计划清单">
+                <i class="fa fa-chevron-left"></i> 计划清单
               </a>
             
           </div>
@@ -380,10 +510,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/zfxcoder/2017/04/06/pro angular8(16)/" rel="prev" title="angularjs高级程序设计读书笔记系列之八">
-                angularjs高级程序设计读书笔记系列之八 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -494,7 +620,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#代码解释"><span class="nav-number">1.</span> <span class="nav-text">代码解释</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#html标签"><span class="nav-number">1.</span> <span class="nav-text">html标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">2.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#css属性"><span class="nav-number">3.</span> <span class="nav-text">css属性</span></a></li></ol></div>
             
 
           </div>
