@@ -91,6 +91,7 @@
 <meta property="og:title" content="正方形程序员的博客">
 <meta property="og:url" content="https://yaobaozai.github.io/zfxcoder/index.html">
 <meta property="og:site_name" content="正方形程序员的博客">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正方形程序员的博客">
 
@@ -237,6 +238,253 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://yaobaozai.github.io/zfxcoder/zfxcoder/2017/08/03/8-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Evan Yao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/zfxcoder/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="正方形程序员的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/zfxcoder/2017/08/03/8-3/" itemprop="url">
+                  8月想完成的事情
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-03T15:00:55+08:00">
+                2017-08-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p> OK，首先交一下底，最近的状态很不错，我也渐渐走出了阴霾。嗯，所以博客要开始继续更新了。计划是在8月份一周更新3篇，总计12篇博文。覆盖vue、mongodb、webpack、nodejs技术点。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://yaobaozai.github.io/zfxcoder/zfxcoder/2017/08/03/8-3-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Evan Yao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/zfxcoder/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="正方形程序员的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/zfxcoder/2017/08/03/8-3-2/" itemprop="url">
+                  mongodb笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-03T15:00:55+08:00">
+                2017-08-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="mongodb配置与安装"><a href="#mongodb配置与安装" class="headerlink" title="mongodb配置与安装"></a>mongodb配置与安装</h1><h2 id="关键命令"><a href="#关键命令" class="headerlink" title="关键命令"></a>关键命令</h2><p>启动<code>mongod --config c:\MongoDB\etc\mongo.conf --auth</code><br>开启shell终端 <code>mongo</code><br>以上两步都需要配置环境变量完成(见后面)</p>
+<h2 id="mongodb配置文件"><a href="#mongodb配置文件" class="headerlink" title="mongodb配置文件"></a>mongodb配置文件</h2><p>#数据库路径<br>dbpath=c:\MongoDB\data\<br>#日志输出文件路径<br>logpath=c:\MongoDB\logs\mongo.log<br>#错误日志采用追加模式，配置这个选项后mongodb的日志会追加到现有的日志文件，而不是重新创建一个新文件<br>logappend=true<br>#启用日志文件，默认启用<br>journal=true<br>#这个选项可以过滤掉一些无用的日志信息，若需要调试使用请设置为false<br>quiet=true<br>#端口号 默认为27017<br>#http 配置<br>httpinterface=true</p>
+<p>说明一下<br>win7 32位系统有坑 在conf文件里需要加这么一句<br>storageEngine=mmapv1<br>如果你是win10就不必了 管理工具推荐使用robomongo</p>
+<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><p>计算机 -&gt; 属性 -&gt; 高级系统设置 -&gt; 系统变量 -&gt; Path编辑 -&gt; 新建<br>然后把mongodb的bin目录路径复制进来</p>
+<p>MongoDB基本语法<br><a href="http://www.runoob.com/mongodb/mongodb-query.html" target="_blank" rel="external">http://www.runoob.com/mongodb/mongodb-query.html</a></p>
+<p>express-generator目录讲解<br>bin可执行文件<br>public:<br>routes:<br>views:</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -1424,319 +1672,6 @@ gulp.task(<span class="string">'default'</span>,[<span class="string">'serve'</s
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://yaobaozai.github.io/zfxcoder/zfxcoder/2017/04/03/pro angular6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Evan Yao">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/zfxcoder/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="正方形程序员的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/zfxcoder/2017/04/03/pro angular6/" itemprop="url">
-                  angularjs高级程序设计读书笔记系列之六
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-03T19:10:19+08:00">
-                2017-04-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>占位。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://yaobaozai.github.io/zfxcoder/zfxcoder/2017/04/02/pro angular5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Evan Yao">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/zfxcoder/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="正方形程序员的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/zfxcoder/2017/04/02/pro angular5/" itemprop="url">
-                  angularjs高级程序设计读书笔记系列之五(CH9)
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-02T17:40:19+08:00">
-                2017-04-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="ch9"><a href="#ch9" class="headerlink" title="ch9"></a>ch9</h1><table>
-<thead>
-<tr>
-<th style="text-align:left">本章问题</th>
-<th style="text-align:left">解决方案</th>
-<th style="text-align:center">代码清单</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">创建一个AngularJS模块</td>
-<td style="text-align:left"><code>angular.module</code></td>
-<td style="text-align:center">1、2</td>
-</tr>
-<tr>
-<td style="text-align:left">设置一个模块的作用域</td>
-<td style="text-align:left"><code>ng-app</code>属性</td>
-<td style="text-align:center">3</td>
-</tr>
-<tr>
-<td style="text-align:left">定义一个控制器</td>
-<td style="text-align:left"><code>Module.controller</code>方法</td>
-<td style="text-align:center">4、8</td>
-</tr>
-<tr>
-<td style="text-align:left">将一个控制器应用于一个视图</td>
-<td style="text-align:left"><code>ng-controller</code>属性</td>
-<td style="text-align:center">5、7</td>
-</tr>
-<tr>
-<td style="text-align:left">从一个控制器向一个视图传递数据</td>
-<td style="text-align:left"><code>$scope</code>服务</td>
-<td style="text-align:center">6</td>
-</tr>
-<tr>
-<td style="text-align:left">定义一个指令</td>
-<td style="text-align:left"><code>Module.directive</code>方法</td>
-<td style="text-align:center">9  </td>
-</tr>
-<tr>
-<td style="text-align:left">定义一个过滤器</td>
-<td style="text-align:left"><code>Module.filter</code>方法</td>
-<td style="text-align:center">10</td>
-</tr>
-<tr>
-<td style="text-align:left">以编程方式使用一个过滤器</td>
-<td style="text-align:left"><code>$filter</code>服务</td>
-<td style="text-align:center">11</td>
-</tr>
-<tr>
-<td style="text-align:left">定义一个服务</td>
-<td style="text-align:left"><code>Module.service、Module.factory、Module.provider</code></td>
-<td style="text-align:center">12</td>
-</tr>
-<tr>
-<td style="text-align:left">从一个已有的对象或值定义一个服务</td>
-<td style="text-align:left"><code>Module.value</code>方法</td>
-<td style="text-align:center">13</td>
-</tr>
-<tr>
-<td style="text-align:left">向应用程序中的代码添加结构</td>
-<td style="text-align:left">创建多个模块并从<code>ng-app</code> 属性引用的模块中声明依赖</td>
-<td style="text-align:center">14-16 </td>
-</tr>
-<tr>
-<td style="text-align:left">注册在模块被加载时调用的函数</td>
-<td style="text-align:left">使用<code>Module.config</code> 和 <code>Module.run</code>方法</td>
-<td style="text-align:center">17 </td>
-</tr>
-</tbody>
-</table>
-<p>config(callback) constant(key,value) run(callback)</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1786,7 +1721,7 @@ gulp.task(<span class="string">'default'</span>,[<span class="string">'serve'</s
           
             <div class="site-state-item site-state-posts">
               <a href="/zfxcoder/archives">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
