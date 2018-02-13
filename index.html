@@ -324,99 +324,18 @@
 
       
         
-          
-            <h1 id="文章目的"><a href="#文章目的" class="headerlink" title="文章目的"></a>文章目的</h1><p>这篇文章带领大家搭建一个基本的开发环境。</p>
+          <h1 id="文章目的"><a href="#文章目的" class="headerlink" title="文章目的"></a>文章目的</h1><p>这篇文章带领大家搭建一个基本的开发环境。</p>
 <h2 id="gulp、用到的gulpAPI以及插件"><a href="#gulp、用到的gulpAPI以及插件" class="headerlink" title="gulp、用到的gulpAPI以及插件"></a>gulp、用到的gulpAPI以及插件</h2><p>gulp是一个前端的自动化工具，个人主观觉得，较之webpack上手简单一些。这里只针对本文所用到的api及插件进行简要说明，更多的可以去看官方文档。</p>
 <p><font color="#f60">全局安装gulp</font> <code>npm install gulp -g</code></p>
 <p><font color="#f60">安装gulp到项目依赖</font> <code>npm install gulp --save-dev</code></p>
 <p><font color="lightblue">安装gulp插件以空格隔开</font> <code>npm install --save-dev gulp-load-plugins gulp-plumber gulp-concat gulp-uglify gulp-less gulp-cssmin gulp-imagemin gulp-connect gulp-server gulp-clean open</code></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">api</th>
-<th style="text-align:left">作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">gulp.task(name,[依赖的task],function(){})</td>
-<td style="text-align:left">创建一个gulp任务，如不用依赖的任务则可以不填</td>
-</tr>
-<tr>
-<td style="text-align:left">gulp.src(param:文件路径)</td>
-<td style="text-align:left">读取文件</td>
-</tr>
-<tr>
-<td style="text-align:left">pipe(在这里进行你想要的操作)</td>
-<td style="text-align:left">pipe在英语里是管道的意思 在这就是流处理，一个接一个，用这个包起来就可以把处理后的状态传递给下一个pipe</td>
-</tr>
-<tr>
-<td style="text-align:left">gulp.dest(输出文件夹的路径)</td>
-<td style="text-align:left">dest即destination目的地 文件经过上一次的pipe处理后输出到哪</td>
-</tr>
-<tr>
-<td style="text-align:left">gulp.watch(文件,进行的task)</td>
-<td style="text-align:left">监听文件，你想要的操作</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">插件</th>
-<th style="text-align:left">作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">gulp-load-plugins</td>
-<td style="text-align:left">gulp使用插件的入口</td>
-</tr>
-<tr>
-<td style="text-align:left">gulp-plumber</td>
-<td style="text-align:left">即使检测到语法错误也继续完成编译</td>
-</tr>
-<tr>
-<td style="text-align:left">gulp-concat</td>
-<td style="text-align:left">合并文件</td>
-</tr>
-<tr>
-<td style="text-align:left">gulp-uglify</td>
-<td style="text-align:left">混淆压缩处理js</td>
-</tr>
-<tr>
-<td style="text-align:left">gulp-less</td>
-<td style="text-align:left">编译less</td>
-</tr>
-<tr>
-<td style="text-align:left">gulp-cssmin</td>
-<td style="text-align:left">压缩处理css</td>
-</tr>
-<tr>
-<td style="text-align:left">gulp-imagemin</td>
-<td style="text-align:left">压缩图片</td>
-</tr>
-<tr>
-<td style="text-align:left">gulp-connect</td>
-<td style="text-align:left">这是个多功能插件，首先connect是一个对象 它有reload()方法和server()方法</td>
-</tr>
-<tr>
-<td style="text-align:left">server({root:路径,livereload:boolean,port:端口})</td>
-<td style="text-align:left">启动服务器，我们这里给它进行了必要的路径配置和端口配置,livereload:是否启动实时刷新</td>
-</tr>
-<tr>
-<td style="text-align:left">gulp-clean</td>
-<td style="text-align:left">恢复到编译之前的状态</td>
-</tr>
-<tr>
-<td style="text-align:left">open</td>
-<td style="text-align:left">使用默认浏览器打开网址</td>
-</tr>
-</tbody>
-</table>
-<p>## </p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/zfxcoder/2017/05/19/gulp初级用法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -534,23 +453,16 @@
 
       
         
-          
-            <h1 id="初始化你的博客"><a href="#初始化你的博客" class="headerlink" title="初始化你的博客"></a>初始化你的博客</h1><p>windows下打开命令行，<br>1.安装脚手架工具，这条命令的作用是可以让你在全局使用hexo命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure></p>
+          <h1 id="初始化你的博客"><a href="#初始化你的博客" class="headerlink" title="初始化你的博客"></a>初始化你的博客</h1><p>windows下打开命令行，<br>1.安装脚手架工具，这条命令的作用是可以让你在全局使用hexo命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure></p>
 <p>2.然后<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init 初始化</span><br><span class="line">hexo g   g是generator的缩写 生成静态文件</span><br><span class="line">hexo s   s是serve的缩写 当然你也可以写全称的</span><br></pre></td></tr></table></figure></p>
-<p>成功以后你就可以在localhost:4000看到你个人博客的界面啦！</p>
-<h1 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h1><p>初始化的状态肯定没法看，这就需要用到主题。<br>我这里介绍next主题的安装和配置。<br>1.找到你博客下的themes文件夹 命令行移动到这个路径下<br>输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next</span><br></pre></td></tr></table></figure></p>
-<p>正确路径themes/next<br>3.到此你就安装好了next主题，我们还需要配置好它。先把hext-theme-next文件夹名改为next<br>4.找到目录的_config.yml文件，这是hexo博客的主配置文件，找到theme项改成<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure></p>
-<p>记住所有配置文件冒号后要跟一个空格才会生效</p>
-<h1 id="部署到gitpages"><a href="#部署到gitpages" class="headerlink" title="部署到gitpages"></a>部署到gitpages</h1><p>1.再次找到_config.yml文件，这次是最下面的deploy项。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span>: git</span><br><span class="line">repo: 这里是你git项目的地址 如我的是 https://github.com/yaobaozai/zfxcoder.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure></p>
-<p>2.安装部署用的插件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
-<p>3.如果你现在运行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d    d是deploy的缩写</span><br></pre></td></tr></table></figure></p>
-<p>你肯定在对应的page路径看不到效果<br>4.你还需要在github上新建个项目，进入到对应项目settings里的github pages，source设置为master branch<br>5.回到_config.yml配置文件，找到url，把url改成你gitpages的路径（注意这和github的项目路径是两个路径）<br>root项也需要改一下。比如我的是这样的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">url: https://yaobaozai.github.io/zfxcoder/</span><br><span class="line">root: /zfxcoder</span><br></pre></td></tr></table></figure></p>
-<p>6.site里的language可以写 zh-Hans<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">language: zh-Hans</span><br></pre></td></tr></table></figure></p>
-<p>这样你博客的语言就成了简体中文<br>7.最后再<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure></p>
-<p>清理下前面的静态文件 再启动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo g </span><br><span class="line">hexo s </span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
-<p>接着你就可以在gitpages的路径访问你的博客啦~</p>
-
-          
+<p>成功以后你就可以在localhost:4000看到你个人博客的界面啦！<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/zfxcoder/2017/03/28/windows使用hexo搭建个人博客并部署到github/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
