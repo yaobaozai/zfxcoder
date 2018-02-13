@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="ch9   本章问题 解决方案 代码清单     创建一个AngularJS模块 angular.module 1、2   设置一个模块的作用域 ng-app属性 3   定义一个控制器 Module.controller方法 4、8   将一个控制器应用于一个视图 ng-controller属性 5、7   从一个控制器向一个视图传递数据 $scope服务 6   定义一个指令 Module.d">
+<meta name="description" content="文章目的这篇文章带领大家搭建一个基本的开发环境。 gulp、用到的gulpAPI以及插件gulp是一个前端的自动化工具，个人主观觉得，较之webpack上手简单一些。这里只针对本文所用到的api及插件进行简要说明，更多的可以去看官方文档。 全局安装gulp npm install gulp -g 安装gulp到项目依赖 npm install gulp --save-dev 安装gulp插件以空格">
 <meta property="og:type" content="article">
-<meta property="og:title" content="angularjs高级程序设计读书笔记系列之五(CH9)">
-<meta property="og:url" content="https://yaobaozai.github.io/zfxcoder/2017/04/02/pro angular5/index.html">
+<meta property="og:title" content="gulp初级用法">
+<meta property="og:url" content="https://yaobaozai.github.io/zfxcoder/2017/05/19/gulp初级用法/index.html">
 <meta property="og:site_name" content="正方形程序员的博客">
-<meta property="og:description" content="ch9   本章问题 解决方案 代码清单     创建一个AngularJS模块 angular.module 1、2   设置一个模块的作用域 ng-app属性 3   定义一个控制器 Module.controller方法 4、8   将一个控制器应用于一个视图 ng-controller属性 5、7   从一个控制器向一个视图传递数据 $scope服务 6   定义一个指令 Module.d">
+<meta property="og:description" content="文章目的这篇文章带领大家搭建一个基本的开发环境。 gulp、用到的gulpAPI以及插件gulp是一个前端的自动化工具，个人主观觉得，较之webpack上手简单一些。这里只针对本文所用到的api及插件进行简要说明，更多的可以去看官方文档。 全局安装gulp npm install gulp -g 安装gulp到项目依赖 npm install gulp --save-dev 安装gulp插件以空格">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-05-17T03:17:26.000Z">
+<meta property="og:updated_time" content="2018-02-13T07:31:29.117Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="angularjs高级程序设计读书笔记系列之五(CH9)">
-<meta name="twitter:description" content="ch9   本章问题 解决方案 代码清单     创建一个AngularJS模块 angular.module 1、2   设置一个模块的作用域 ng-app属性 3   定义一个控制器 Module.controller方法 4、8   将一个控制器应用于一个视图 ng-controller属性 5、7   从一个控制器向一个视图传递数据 $scope服务 6   定义一个指令 Module.d">
+<meta name="twitter:title" content="gulp初级用法">
+<meta name="twitter:description" content="文章目的这篇文章带领大家搭建一个基本的开发环境。 gulp、用到的gulpAPI以及插件gulp是一个前端的自动化工具，个人主观觉得，较之webpack上手简单一些。这里只针对本文所用到的api及插件进行简要说明，更多的可以去看官方文档。 全局安装gulp npm install gulp -g 安装gulp到项目依赖 npm install gulp --save-dev 安装gulp插件以空格">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https://yaobaozai.github.io/zfxcoder/2017/04/02/pro angular5/"/>
+  <link rel="canonical" href="https://yaobaozai.github.io/zfxcoder/2017/05/19/gulp初级用法/"/>
 
 
 
 
 
-  <title> angularjs高级程序设计读书笔记系列之五(CH9) | 正方形程序员的博客 </title>
+  <title> gulp初级用法 | 正方形程序员的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -250,7 +250,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://yaobaozai.github.io/zfxcoder/zfxcoder/2017/04/02/pro angular5/">
+    <link itemprop="mainEntityOfPage" href="https://yaobaozai.github.io/zfxcoder/zfxcoder/2017/05/19/gulp初级用法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Evan Yao">
@@ -271,7 +271,7 @@
             
             
               
-                angularjs高级程序设计读书笔记系列之五(CH9)
+                gulp初级用法
               
             
           </h1>
@@ -286,8 +286,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-02T17:40:19+08:00">
-                2017-04-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-19T16:00:55+08:00">
+                2017-05-19
               </time>
             
 
@@ -322,78 +322,96 @@
       
 
       
-        <h1 id="ch9"><a href="#ch9" class="headerlink" title="ch9"></a>ch9</h1><table>
+        <h1 id="文章目的"><a href="#文章目的" class="headerlink" title="文章目的"></a>文章目的</h1><p>这篇文章带领大家搭建一个基本的开发环境。</p>
+<h2 id="gulp、用到的gulpAPI以及插件"><a href="#gulp、用到的gulpAPI以及插件" class="headerlink" title="gulp、用到的gulpAPI以及插件"></a>gulp、用到的gulpAPI以及插件</h2><p>gulp是一个前端的自动化工具，个人主观觉得，较之webpack上手简单一些。这里只针对本文所用到的api及插件进行简要说明，更多的可以去看官方文档。</p>
+<p><font color="#f60">全局安装gulp</font> <code>npm install gulp -g</code></p>
+<p><font color="#f60">安装gulp到项目依赖</font> <code>npm install gulp --save-dev</code></p>
+<p><font color="lightblue">安装gulp插件以空格隔开</font> <code>npm install --save-dev gulp-load-plugins gulp-plumber gulp-concat gulp-uglify gulp-less gulp-cssmin gulp-imagemin gulp-connect gulp-server gulp-clean open</code></p>
+<table>
 <thead>
 <tr>
-<th style="text-align:left">本章问题</th>
-<th style="text-align:left">解决方案</th>
-<th style="text-align:center">代码清单</th>
+<th style="text-align:left">api</th>
+<th style="text-align:left">作用</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">创建一个AngularJS模块</td>
-<td style="text-align:left"><code>angular.module</code></td>
-<td style="text-align:center">1、2</td>
+<td style="text-align:left">gulp.task(name,[依赖的task],function(){})</td>
+<td style="text-align:left">创建一个gulp任务，如不用依赖的任务则可以不填</td>
 </tr>
 <tr>
-<td style="text-align:left">设置一个模块的作用域</td>
-<td style="text-align:left"><code>ng-app</code>属性</td>
-<td style="text-align:center">3</td>
+<td style="text-align:left">gulp.src(param:文件路径)</td>
+<td style="text-align:left">读取文件</td>
 </tr>
 <tr>
-<td style="text-align:left">定义一个控制器</td>
-<td style="text-align:left"><code>Module.controller</code>方法</td>
-<td style="text-align:center">4、8</td>
+<td style="text-align:left">pipe(在这里进行你想要的操作)</td>
+<td style="text-align:left">pipe在英语里是管道的意思 在这就是流处理，一个接一个，用这个包起来就可以把处理后的状态传递给下一个pipe</td>
 </tr>
 <tr>
-<td style="text-align:left">将一个控制器应用于一个视图</td>
-<td style="text-align:left"><code>ng-controller</code>属性</td>
-<td style="text-align:center">5、7</td>
+<td style="text-align:left">gulp.dest(输出文件夹的路径)</td>
+<td style="text-align:left">dest即destination目的地 文件经过上一次的pipe处理后输出到哪</td>
 </tr>
 <tr>
-<td style="text-align:left">从一个控制器向一个视图传递数据</td>
-<td style="text-align:left"><code>$scope</code>服务</td>
-<td style="text-align:center">6</td>
-</tr>
-<tr>
-<td style="text-align:left">定义一个指令</td>
-<td style="text-align:left"><code>Module.directive</code>方法</td>
-<td style="text-align:center">9  </td>
-</tr>
-<tr>
-<td style="text-align:left">定义一个过滤器</td>
-<td style="text-align:left"><code>Module.filter</code>方法</td>
-<td style="text-align:center">10</td>
-</tr>
-<tr>
-<td style="text-align:left">以编程方式使用一个过滤器</td>
-<td style="text-align:left"><code>$filter</code>服务</td>
-<td style="text-align:center">11</td>
-</tr>
-<tr>
-<td style="text-align:left">定义一个服务</td>
-<td style="text-align:left"><code>Module.service、Module.factory、Module.provider</code></td>
-<td style="text-align:center">12</td>
-</tr>
-<tr>
-<td style="text-align:left">从一个已有的对象或值定义一个服务</td>
-<td style="text-align:left"><code>Module.value</code>方法</td>
-<td style="text-align:center">13</td>
-</tr>
-<tr>
-<td style="text-align:left">向应用程序中的代码添加结构</td>
-<td style="text-align:left">创建多个模块并从<code>ng-app</code> 属性引用的模块中声明依赖</td>
-<td style="text-align:center">14-16 </td>
-</tr>
-<tr>
-<td style="text-align:left">注册在模块被加载时调用的函数</td>
-<td style="text-align:left">使用<code>Module.config</code> 和 <code>Module.run</code>方法</td>
-<td style="text-align:center">17 </td>
+<td style="text-align:left">gulp.watch(文件,进行的task)</td>
+<td style="text-align:left">监听文件，你想要的操作</td>
 </tr>
 </tbody>
 </table>
-<p>config(callback) constant(key,value) run(callback)</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">插件</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">gulp-load-plugins</td>
+<td style="text-align:left">gulp使用插件的入口</td>
+</tr>
+<tr>
+<td style="text-align:left">gulp-plumber</td>
+<td style="text-align:left">即使检测到语法错误也继续完成编译</td>
+</tr>
+<tr>
+<td style="text-align:left">gulp-concat</td>
+<td style="text-align:left">合并文件</td>
+</tr>
+<tr>
+<td style="text-align:left">gulp-uglify</td>
+<td style="text-align:left">混淆压缩处理js</td>
+</tr>
+<tr>
+<td style="text-align:left">gulp-less</td>
+<td style="text-align:left">编译less</td>
+</tr>
+<tr>
+<td style="text-align:left">gulp-cssmin</td>
+<td style="text-align:left">压缩处理css</td>
+</tr>
+<tr>
+<td style="text-align:left">gulp-imagemin</td>
+<td style="text-align:left">压缩图片</td>
+</tr>
+<tr>
+<td style="text-align:left">gulp-connect</td>
+<td style="text-align:left">这是个多功能插件，首先connect是一个对象 它有reload()方法和server()方法</td>
+</tr>
+<tr>
+<td style="text-align:left">server({root:路径,livereload:boolean,port:端口})</td>
+<td style="text-align:left">启动服务器，我们这里给它进行了必要的路径配置和端口配置,livereload:是否启动实时刷新</td>
+</tr>
+<tr>
+<td style="text-align:left">gulp-clean</td>
+<td style="text-align:left">恢复到编译之前的状态</td>
+</tr>
+<tr>
+<td style="text-align:left">open</td>
+<td style="text-align:left">使用默认浏览器打开网址</td>
+</tr>
+</tbody>
+</table>
+<p>## </p>
 
       
     </div>
@@ -430,8 +448,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/zfxcoder/2017/04/01/pro angular4/" rel="next" title="angularjs高级程序设计读书笔记系列之四(CH5)">
-                <i class="fa fa-chevron-left"></i> angularjs高级程序设计读书笔记系列之四(CH5)
+              <a href="/zfxcoder/2017/03/28/windows使用hexo搭建个人博客并部署到github/" rel="next" title="windows使用hexo搭建个人博客并部署到github">
+                <i class="fa fa-chevron-left"></i> windows使用hexo搭建个人博客并部署到github
               </a>
             
           </div>
@@ -439,10 +457,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/zfxcoder/2017/04/03/pro angular6/" rel="prev" title="angularjs高级程序设计读书笔记系列之六">
-                angularjs高级程序设计读书笔记系列之六 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -514,7 +528,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/zfxcoder/archives">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -553,7 +567,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ch9"><span class="nav-number">1.</span> <span class="nav-text">ch9</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文章目的"><span class="nav-number">1.</span> <span class="nav-text">文章目的</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#gulp、用到的gulpAPI以及插件"><span class="nav-number">1.1.</span> <span class="nav-text">gulp、用到的gulpAPI以及插件</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -576,7 +590,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
